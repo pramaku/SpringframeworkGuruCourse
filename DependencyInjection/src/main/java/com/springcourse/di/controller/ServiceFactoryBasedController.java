@@ -4,17 +4,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
 import com.springcourse.di.service.GreetingService;
+import com.springcourse.di.service.GreetingServiceFactory;
 
 @Controller
-public class ConstructorInjectorController implements InjectionController
+public class ServiceFactoryBasedController implements InjectionController
 {
     private GreetingService greetingService;
 
     @Autowired
-    public ConstructorInjectorController(GreetingService hiGreetingServiceImpl)
+    public ServiceFactoryBasedController(GreetingServiceFactory serviceFactory)
     {
-        super();
-        this.greetingService = hiGreetingServiceImpl;
+        greetingService = serviceFactory.getPrimaryGreetingService("en");
     }
 
     @Override
@@ -22,4 +22,5 @@ public class ConstructorInjectorController implements InjectionController
     {
         return greetingService.greet();
     }
+
 }

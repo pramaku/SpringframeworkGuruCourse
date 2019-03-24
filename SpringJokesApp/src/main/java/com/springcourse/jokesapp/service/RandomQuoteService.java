@@ -1,22 +1,23 @@
 package com.springcourse.jokesapp.service;
 
-import org.springframework.stereotype.Service;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import guru.springframework.norris.chuck.ChuckNorrisQuotes;
 
-@Service
+//@Service
 public class RandomQuoteService implements JokeService
 {
-    private final ChuckNorrisQuotes quotes;
+    private final ChuckNorrisQuotes chuckNorrisQuotes;
 
-    public RandomQuoteService()
+    @Autowired
+    public RandomQuoteService(ChuckNorrisQuotes chuckNorrisQuotes)
     {
-        quotes = new ChuckNorrisQuotes();
+        this.chuckNorrisQuotes = chuckNorrisQuotes;
     }
 
     @Override
     public String getRandomJoke()
     {
-        return quotes.getRandomQuote();
+        return chuckNorrisQuotes.getRandomQuote();
     }
 }

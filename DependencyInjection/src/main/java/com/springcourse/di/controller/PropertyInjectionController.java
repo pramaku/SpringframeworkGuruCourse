@@ -1,6 +1,7 @@
 package com.springcourse.di.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
 import com.springcourse.di.service.GreetingService;
@@ -9,7 +10,7 @@ import com.springcourse.di.service.GreetingService;
 public class PropertyInjectionController implements InjectionController
 {
     @Autowired
-    // @Qualifier("hiGreetingServiceImpl")
+    @Qualifier("hiGreetingServiceImpl")
     GreetingService hiGreetingServiceImpl;
 
     @Override

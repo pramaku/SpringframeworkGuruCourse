@@ -3,7 +3,6 @@ package com.springcourse.di.service;
 import org.springframework.stereotype.Service;
 
 @Service
-
 public class HiGreetingServiceImpl implements GreetingService
 {
     public static final String GREETING_SERVICE_IMPL_HELLO = "GreetingServiceImpl - Hi";
