@@ -8,6 +8,8 @@ import com.springcourse.di.controller.ConstructorInjectorController;
 import com.springcourse.di.controller.PropertyInjectionController;
 import com.springcourse.di.controller.ServiceFactoryBasedController;
 import com.springcourse.di.controller.SetterInjectionController;
+import com.springcourse.di.service.DataSource;
+import com.springcourse.di.service.JmsSource;
 
 @SpringBootApplication
 public class DependencyInjectionApplication
@@ -20,5 +22,15 @@ public class DependencyInjectionApplication
         System.out.println(cxt.getBean(ConstructorInjectorController.class).getGreeting());
         System.out.println(cxt.getBean(ServiceFactoryBasedController.class).getGreeting());
 
+        DataSource dataSource = cxt.getBean(DataSource.class);
+        System.out.println(dataSource.getUser());
+        System.out.println(dataSource.getPassword());
+        System.out.println(dataSource.getUrl());
+        System.out.println(dataSource.getEnv());
+
+        JmsSource jmsSource = cxt.getBean(JmsSource.class);
+        System.out.println(jmsSource.getUser());
+        System.out.println(jmsSource.getPassword());
+        System.out.println(jmsSource.getQueueName());
     }
 }
