@@ -3,14 +3,14 @@
   <parent>
     <groupId>com.example</groupId>
     <artifactId>petclinic</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
   </parent>
   <artifactId>pet-clinic-web</artifactId>
   <dependencies>
   		<dependency>
   			<groupId>com.example</groupId>
     		<artifactId>pet-clinic-data</artifactId>
-    		<version>0.0.1-SNAPSHOT</version>
+    		<version>0.0.1</version>
   		</dependency>
 
   		<dependency>
