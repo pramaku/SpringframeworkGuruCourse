@@ -11,7 +11,8 @@ public class ConstructorInjectedController
 {
 	private GreetingService greetingService;
 
-	public ConstructorInjectedController(@Qualifier("hiGreetingServiceImpl") GreetingService greetingService)
+	
+	public ConstructorInjectedController(@Qualifier("spanishGreetingService") GreetingService greetingService)
 	{
 		this.greetingService = greetingService;
 	}

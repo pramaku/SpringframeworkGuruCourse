@@ -3,7 +3,6 @@ package com.example.di.demo.services;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
-@Service
 public class HiGreetingServiceImpl implements GreetingService
 {
 	private String greeting;

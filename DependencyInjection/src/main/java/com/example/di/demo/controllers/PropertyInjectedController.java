@@ -10,7 +10,7 @@ import com.example.di.demo.services.GreetingService;
 public class PropertyInjectedController
 {
 	@Autowired
-	@Qualifier("greetingServiceImpl")
+	@Qualifier("hiGreetingService")
 	public GreetingService greetingService;
 	
 	public String sayHello()
