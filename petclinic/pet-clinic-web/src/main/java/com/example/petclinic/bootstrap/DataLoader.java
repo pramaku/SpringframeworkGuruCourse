@@ -1,15 +1,17 @@
 package com.example.petclinic.bootstrap;
 
+import java.time.LocalDate;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import com.example.petclinic.model.Owner;
+import com.example.petclinic.model.Pet;
 import com.example.petclinic.model.PetType;
 import com.example.petclinic.model.Speciality;
 import com.example.petclinic.model.Vet;
 import com.example.petclinic.services.OwnerService;
-import com.example.petclinic.services.PetService;
 import com.example.petclinic.services.PetTypeService;
 import com.example.petclinic.services.SpecialityService;
 import com.example.petclinic.services.VetService;
@@ -51,14 +53,26 @@ public class DataLoader implements CommandLineRunner
 		cat.setName("Nas");
 		petTypeService.save(cat);
 
+		Pet p1 = new Pet();
+		p1.setName("rasco");
+		//p1.setOwner(owner1);
+		p1.setBirthDate(LocalDate.now());
+
 		Owner owner1 = new Owner();
 		owner1.setFirstName("Bob");
 		owner1.setLastName("Scmidt");
+		owner1.setAddress("street1");
+		owner1.setCity("NY");
+		owner1.setTelephone("1234");
+		owner1.getPets().add(p1);
 		
 		Owner owner2 = new Owner();
 		owner2.setFirstName("Terry");
 		owner2.setLastName("Lang");
-
+		owner2.setAddress("street2");
+		owner2.setCity("PH");
+		owner2.setTelephone("5678");
+		owner2.getPets().add(p1);
 		System.out.println("Loading owners .....");
 		ownerService.save(owner1);
 		ownerService.save(owner2);
