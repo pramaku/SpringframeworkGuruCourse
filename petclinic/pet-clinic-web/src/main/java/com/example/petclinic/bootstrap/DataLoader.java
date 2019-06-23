@@ -56,6 +56,7 @@ public class DataLoader implements CommandLineRunner
 		Pet p1 = new Pet();
 		p1.setName("rasco");
 		//p1.setOwner(owner1);
+		p1.setPetType(dog);
 		p1.setBirthDate(LocalDate.now());
 
 		Owner owner1 = new Owner();
