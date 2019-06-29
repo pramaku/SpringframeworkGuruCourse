@@ -6,9 +6,7 @@ import java.util.Set;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
-import com.example.petclinic.model.PetType;
 import com.example.petclinic.model.Speciality;
-import com.example.petclinic.repositories.PetTypeRepository;
 import com.example.petclinic.repositories.SpecialityRepository;
 import com.example.petclinic.services.SpecialityService;
 
