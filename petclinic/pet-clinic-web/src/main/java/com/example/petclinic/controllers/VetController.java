@@ -10,14 +10,12 @@ import com.example.petclinic.services.VetService;
 public class VetController
 {
 	private final VetService vetService;
-	
-	
+
 	public VetController(VetService vetService)
 	{
 		super();
 		this.vetService = vetService;
 	}
-
 
 	@RequestMapping({"/vets", "/vets.html", "/vets/index", "/vets/index.html"})
 	public String listVets(Model model)

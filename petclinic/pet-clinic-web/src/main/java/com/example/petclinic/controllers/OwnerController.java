@@ -11,13 +11,11 @@ public class OwnerController
 {
 	private final OwnerService ownerService;
 
-	
 	public OwnerController(OwnerService ownerService)
 	{
 		super();
 		this.ownerService = ownerService;
 	}
-
 
 	@RequestMapping({"/owners", "/owners/index", "/owners/index.html"})
 	public String listOwners(Model model)

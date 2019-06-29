@@ -15,8 +15,7 @@ public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements 
 {
 	private final PetTypeService petTypeService;
 	private final PetService petService;
-	
-	
+
 	public OwnerServiceMap(PetTypeService petTypeService, PetService petService)
 	{
 		super();
@@ -39,7 +38,6 @@ public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements 
 	@Override
 	public Owner save(Owner object)
 	{
-		Owner savedOwner = null;
 		if (object == null)
 		{
 			return null;
